@@ -14,7 +14,6 @@ body {
   overflow: hidden;
 }
 
-/* Soft background overlay */
 body::before {
   content: "";
   position: absolute;
@@ -26,7 +25,7 @@ body::before {
 .overlay {
   position: relative;
   z-index: 1;
-  min-height: calc(100vh - 80px); /* leave space for footer */
+  min-height: calc(100vh - 80px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -85,44 +84,26 @@ h1 {
   opacity: 0.8;
 }
 
-.subscribe {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 20px;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 100%;
-  max-width: 400px;
+/* ✅ New Contact Message Styling */
+.contact-message {
+  font-size: 16px;
+  color: #514C44;
+  margin-top: 10px;
+  max-width: 420px;
+  line-height: 1.6;
 }
 
-.subscribe input {
-  flex: 1;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 25px;
-  outline: none;
-  min-width: 180px;
-}
-
-.subscribe button {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 25px;
-  background: #ffffff;
-  color: #333;
+.contact-message a {
+  color: #514C44;
+  text-decoration: none;
   font-weight: 600;
-  cursor: pointer;
+  border-bottom: 1px solid #514C44;
   transition: 0.3s;
 }
 
-.subscribe button:hover {
-  background: #f0f0f0;
-}
-
-.note {
-  font-size: 14px;
-  opacity: 0.8;
-  color: #514C44;
+.contact-message a:hover {
+  color: #333;
+  border-bottom-color: #333;
 }
 
 /* Footer */
@@ -164,13 +145,9 @@ h1 {
   .countdown span {
     font-size: 30px;
   }
-  .subscribe {
-    flex-direction: column;
+  .contact-message {
+    font-size: 14px;
     max-width: 280px;
-  }
-  .subscribe input,
-  .subscribe button {
-    width: 100%;
   }
   .site-footer {
     font-size: 13px;
